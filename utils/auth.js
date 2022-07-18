@@ -11,7 +11,7 @@ const oauth2Client = new google.oauth2Client(
   GOOGLE_CALLBACK_URL
 );
 
-function getGoogleAuthURL() {
+module.exports.getGoogleAuthURL = () => {
   const scopes = [
     "https://www.googleapis.com/auth/userinfo.profile",
     "https://www.googleapis.com/auth/userinfo.email",
@@ -21,4 +21,4 @@ function getGoogleAuthURL() {
     prompt: "consent",
     scope: scopes,
   });
-}
+};
